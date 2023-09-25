@@ -24,14 +24,17 @@ const HomePage = () => {
   }
 
   return (
-    <div>
-      <h1>Pokedex</h1>
-      <h2>Hi Trainer!</h2>
-      <p>To start, please enter you trainer name</p>
-      <form onSubmit={handleTrainer}>
-        <input ref={inputTrainer} type="text" />
-        <button>Start</button>
-      </form>
+    <div className="homepage">
+      <div className="homepage__title">
+      </div>
+      <div className="homepage__container">
+        <h2>Hi Trainer!</h2>
+        <p className="homepage__text">To start, please enter you trainer name</p>
+        <form className="homepage__form" onSubmit={handleTrainer}>
+          <input className="homepage__form__input" ref={inputTrainer} type="text" />
+          <button className="homepage__form__button">Start</button>
+        </form>
+      </div>
     </div>
   )
 }
