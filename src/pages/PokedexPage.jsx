@@ -24,7 +24,7 @@ const PokedexPage = () => {
     if(typeSelected === 'allPokemons') {
       getPokemons()
     } else {
-      getPokemons(getTypePokemon)
+      getTypePokemon(typeSelected)
     }
   }, [typeSelected])
 
