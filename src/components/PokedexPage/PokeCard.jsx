@@ -28,20 +28,20 @@ const PokeCard = ({ url }) => {
         </header>
         <section className='card__info'>
           <h3>{pokemon?.name}</h3>
-          <ul>
+          <ul className='card__list__type'>
             {
               pokemon?.types.map(typeInfo => (
-                <li key={typeInfo.type.url}>{typeInfo.type.name}</li>
+                <li className='card__list__type__item' key={typeInfo.type.url}><span>{typeInfo.type.name}</span></li>
               ))
             }
           </ul>
           <hr />
-          <ul>
+          <ul className='card__list__ability'>
             {
               pokemon?.stats.map(statInfo => (
-                <li key={statInfo.stat.url}>
-                  <span>{statInfo.stat.name}</span>
-                  <span>{statInfo.base_stat}</span>
+                <li  className='card__list__ability__item' key={statInfo.stat.url}>
+                  <span className='card__list__ability__label'>{statInfo.stat.name}</span>
+                  <span className='card__list__ability__value'>{statInfo.base_stat}</span>
                 </li>
               ))
             }

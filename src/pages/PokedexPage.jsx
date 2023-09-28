@@ -52,7 +52,7 @@ const PokedexPage = () => {
         <div className="container__form">
           <form className="header__form" onSubmit={handleSearch}>
             <input ref={inputSearch} placeholder="Search pokemon" type="text" />
-            <button className="header__form__button" title="Search pokemons"></button>
+            <button className="header__form__button" title="Search pokemon"></button>
           </form>
           <SelectType 
             setTypeSelected={setTypeSelected}
